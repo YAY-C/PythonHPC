@@ -8,7 +8,7 @@ from openmp cimport (omp_get_num_threads, omp_get_thread_num,
 
 def hello_omp():
     print("Inside serial region")
-    print("Number of Processors:", omp_get_num_procs())
+    print("Number of Processors:", omp_get_num_threads())
     print()
 
     with nogil, parallel():
