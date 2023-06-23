@@ -25,7 +25,7 @@ def euclidean_numpy(x, y):
 
 nsamples, nfeat = (12000, 50)
 x = 10. * np.random.random([nsamples, nfeat])
-edm_f90 = np.empty([nsamples, nsamples], order='F')
+edm_f90 = np.empty([nsamples, nsamples], order='F')  ## don't forget to change the correct ordering type `col-major` for fortran
 
 start = time.time()
 euclidean_distance_matrix(x.T, x.T, nsamples, nfeat, edm_f90)
